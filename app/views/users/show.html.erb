@@ -1,0 +1,16 @@
+<p>
+  <strong>Username:</strong>
+  <%= @user.username %>
+</p>
+
+<div class="columns is-multiline is-gapless">
+  <% @user.posts.each do |post| %>
+    <div class="column is-one-quarter">
+      <div class="image is-4by3">
+        <%= link_to image_tag(post.image.url), post %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
